@@ -1,0 +1,152 @@
+h1 {
+  font-size: 4vw;
+  color: rgb(162, 0, 255);
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-align: center;
+}
+div.static {
+  position: relative;
+  left: 50px;
+
+  border: 2px solid black;
+}
+.fixed {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  border: 1px solid palegoldenrod;
+}
+.relative {
+  position: relative;
+  border: 2px solid green;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+}
+.absolute {
+  position: absolute;
+  border: 2px solid green;
+  width: 100px;
+  height: 100px;
+  right: 1px;
+  bottom: 1px;
+}
+.sticky {
+  position: sticky;
+
+  width: 100%;
+  background-color: green;
+  color: white;
+  top: 0;
+  padding: 10px;
+}
+.img1 {
+  width: 100%;
+  opacity: 0.3;
+  height: auto;
+  z-index: 2;
+}
+.container {
+  position: relative;
+}
+.pos {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+}
+.div1 {
+  position: relative;
+  border: 2px solid black;
+  width: 1000px;
+  height: 100px;
+  margin: 30px;
+  padding: 100px;
+  z-index: 1;
+}
+.div2 {
+  position: absolute;
+  z-index: 2;
+  background-color: green;
+  height: 60px;
+  width: 500px;
+  left: 50px;
+  top: 50px;
+}
+
+.div3 {
+  position: absolute;
+  z-index: 3;
+  background-color: gray;
+  height: 30px;
+  width: 200px;
+  left: 400px;
+  top: 80px;
+}
+.overflow {
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  overflow: scroll;
+  background-color: blue;
+  color: red;
+  padding: 10px;
+}
+.fl {
+  float: right;
+}
+.divone {
+  border: 1px solid black;
+  float: left;
+}
+.divtwo {
+  border: 1px solid red;
+}
+.clearfix {
+  border: 3px solid red;
+  overflow: auto;
+}
+* {
+  box-sizing: border-box;
+}
+.box2 {
+  width: 33.33%;
+  height: 300px;
+  background-color: gray;
+  float: left;
+  text-align: center;
+  padding: 50px;
+}
+.flexible {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+li {
+  float: left;
+}
+.act {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: green;
+}
+.active {
+  background-color: red;
+}
+ul {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
