@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        text-align: center;
+      }
+      .flex-items-left {
+        background-color: azure;
+        flex: 50%;
+        padding: 50px;
+      }
+      .flex-items-right {
+        background-color: blue;
+        flex: 50%;
+        padding: 50px;
+      }
+      @media (max-width: 800px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+      .header {
+        background-color: rgb(73, 3, 73);
+        padding: 25px;
+        color: green;
+      }
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .menu li {
+        padding: 8px;
+        margin: 4px;
+        background-color: rgb(75, 75, 189);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        color: white;
+      }
+      menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .menu li:hover {
+        background-color: #0099cc;
+      }
+      .aside {
+        background-color: rgb(43, 43, 243);
+        padding: 15px;
+        color: white;
+        box-shadow: 0 1px 2px 3px rgba(red, green, blue, alpha);
+        font-size: 14px;
+      }
+      .footer {
+        background-color: #0099cc;
+        color: #ffff;
+        text-align: center;
+        font-size: 10px;
+        padding: 15px;
+      }
+      [class*="col-"] {
+        float: left;
+        padding: 15pxs;
+      }
+      [class*="col-"] {
+        width: 100%;
+      }
+      @media only screen and (min-width: 600) {
+        .col-s-1 {
+          width: 8.33%;
+        }
+        .col-s-2 {
+          width: 16.66%;
+        }
+        .col-s-3 {
+          width: 25%;
+        }
+        .col-s-4 {
+          width: 33.33%;
+        }
+        .col-s-5 {
+          width: 41.66%;
+        }
+        .col-s-6 {
+          width: 50%;
+        }
+        .col-s-7 {
+          width: 58.33%;
+        }
+        .col-s-8 {
+          width: 66.66%;
+        }
+        .col-s-9 {
+          width: 75%;
+        }
+        .col-s-10 {
+          width: 83.33%;
+        }
+        .col-s-11 {
+          width: 91.66%;
+        }
+        .col-s-12 {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+        .col-3 {
+          width: 25%;
+        }
+        .col-4 {
+          width: 33.33%;
+        }
+        .col-5 {
+          width: 41.66%;
+        }
+        .col-6 {
+          width: 50%;
+        }
+        .col-7 {
+          width: 58.33%;
+        }
+        .col-8 {
+          width: 66.66%;
+        }
+        .col-9 {
+          width: 75%;
+        }
+        .col-10 {
+          width: 83.33%;
+        }
+        .col-11 {
+          width: 91.66%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+      }
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+      }
+      .item3 {
+        grid-area: right;
+      }
+      .item3 {
+        grid-area: footer;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        background-color: #2145f4;
+        grid-template-areas:
+          "header header header header header header"
+          "menu main main main right right"
+          "menu footer footer footer footer footer";
+      }
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GRID</h1>
+    <div class="grid-container">
+      <div class="item1">header</div>
+      <div class="item2">menu</div>
+      <div class="item3">main</div>
+      <div class="item4">Right</div>
+      <div class="item5">Footer</div>
+    </div>
+    <h2>change</h2>
+
+    <div class="container">
+      <div class="flex-items-left">1</div>
+      <div class="flex-items-right">2</div>
+    </div>
+    <br />
+    <div class="header">
+      <h1>kashmir</h1>
+    </div>
+    <div class="row">
+      <div class="col-3 col-s-3 menu">
+        <ul>
+          <li>GULMARG</li>
+          <li>GULMARG</li>
+          <li>GULMARG</li>
+        </ul>
+      </div>
+      <div class="col-6 col-s-9">
+        <h1>The srinagar city</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum placeat
+          recusandae sit veritatis ipsam quia explicabo. Odit, et impedit! Vero
+          et incidunt cum sunt, rem tempore nihil aut nostrum itaque.
+        </p>
+      </div>
+      <div class="col-3 col-s-12">
+        <div class="aside">
+          <h2>What?</h2>
+          <p>srinagar is clean city</p>
+          <h2>Where?</h2>
+          <p>located at kashmir</p>
+          <h2>How?</h2>
+          <p>you can reach it through road and air</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>resize the website</p>
+    </div>
+  </body>
+</html>
